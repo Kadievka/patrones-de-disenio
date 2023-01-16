@@ -1,0 +1,36 @@
+.img-and-name-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-description {
+  width: 100%;
+}
+
+.list-name-and-flag{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item-name{
+  width: 200px;
+}
+
+.country-flag {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 300px;
+}
+
+.country-name{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.item-image{
+  width: fit-content;
+}
+
