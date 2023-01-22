@@ -77,6 +77,6 @@ context.fillStyle = "black";
 
 const ball = new Ball(context, canvas, 10);
 setInterval(()=>{
-  ball.print()
+  ball.print();
 }, 90);
 
