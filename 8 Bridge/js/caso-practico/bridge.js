@@ -39,6 +39,12 @@ class Editor {
     this.implementor.setColor(color);
     this.implementor.print();
   }
+
+  clear() {
+    this.implementor.setWidth(0);
+    this.implementor.setHeight(0);
+    this.implementor.print();
+  }
 }
 
 class CanvasPainter {
@@ -72,23 +78,9 @@ class CanvasPainter {
   }
 }
 
-class EditorWithClear extends Editor {
-  
-  constructor(implementor) {
-    super(implementor);
-    
-  }
-
-  clear() {
-    this.implementor.setWidth(0);
-    this.implementor.setHeight(0);
-    this.implementor.print();
-  }
-}
-
-const editorHtmlPainter = new EditorWithClear(new HtmlPainter(content));
+const editorHtmlPainter = new Editor(new HtmlPainter(content));
 console.log(editorHtmlPainter);
-const editorCanvasPainter = new EditorWithClear(new CanvasPainter(canvas));
+const editorCanvasPainter = new Editor(new CanvasPainter(canvas));
 console.log(editorCanvasPainter);
 
 range1.addEventListener("input", (event) => {
